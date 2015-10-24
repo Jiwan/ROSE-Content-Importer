@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{6174AF28-CF9B-4458-BC33-DA5DEE8C7621}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Arua content impoter</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arua_content_importer.Common.FileHandler\CHR.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\ClientType.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\RoseFile.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\STB.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\STL.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\TSI.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\ZMS.cs" />
+    <Compile Include="Arua_content_importer.Common.FileHandler\ZSC.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\Aera.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\GraphicsDeviceControl.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\GraphicsDeviceService.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\previewControl.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\ServiceContainer.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\Sprite.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\Text.cs" />
+    <Compile Include="Arua_content_importer.Common.GraphicsHandler\textureControl.cs" />
+    <Compile Include="Arua_content_importer\IconForm.cs" />
+    <Compile Include="Arua_content_importer\MainForm.cs" />
+    <Compile Include="Arua_content_importer\PreviewForm.cs" />
+    <Compile Include="Arua_content_importer\Program.cs" />
+    <Compile Include="Arua_content_impoter.Properties\Resources.cs" />
+    <Compile Include="Arua_content_impoter.Properties\Settings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Arua_content_importer\IconForm.resources" />
+    <EmbeddedResource Include="Arua_content_importer\MainForm.resources" />
+    <EmbeddedResource Include="Arua_content_importer\PreviewForm.resources" />
+    <EmbeddedResource Include="Arua_content_impoter.Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
